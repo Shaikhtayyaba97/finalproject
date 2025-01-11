@@ -1,29 +1,30 @@
-import Image from "next/image"; // Import Image from Next.js
-import { Content, Yellowimg } from "../components";
+import React from "react";
+import DanyChair from "../../components/Danychair";
+import Imagee from "../../components/Image";
+import { Products } from "../../components";
 import { CiCircleCheck } from "react-icons/ci";
-import Link from "next/link";
-import Product from "../components/Product";
+import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div>
-      <div className="relative w-full h-full bg-[url('/background.png')] bg-cover bg-center flex flex-col lg:flex-row">
-        <div className="w-full lg:w-[800px]"></div>
-        <div className="bg-white m-8 lg:m-[200px] w-full lg:w-[1000px] h-auto lg:h-[400px] p-8 lg:p-0">
-          <p className="mt-6 ml-12 lg:mt-14 text-lg lg:text-3xl text-[rgb(34,36,46)]">
-            Luxury homeware for people <br /> who love timeless design quality
-          </p>
-          <p className="ml-12 text-xs lg:text-base text-[rgb(91,96,118)] mt-4 lg:mt-8">
-            Shop the new Spring 2022 collection today
-          </p>
-          <Link href='/productlisting2'>
-          <button className="ml-14 py-2 px-6 bg-gray-50 text-[rgb(91,96,118)] text-xs mt-6 lg:mt-36 hover:bg-blue-700">
-            View Collection
-          </button></Link>
+
+export default function Productlisting(){
+    return(
+        <div>
+        <div className="flex justify-between">
+<div>
+    <Imagee/>
+</div>
+
+            <div>
+<DanyChair/></div>
+
+
         </div>
-      </div>
-
-      <div className="mx-4 lg:mx-10 bg-[repeating-linear-gradient(to_right,rgba(255,192,203,0.7)_0px,rgba(255,192,203,0.7)_60px,transparent_60px,transparent_80px)] py-8">
+        <div>
+    <h1 className="text-3xl text-blue-950 m-7">You might also like
+        <Products/>
+    </h1>
+</div>
+<div className="mx-4 lg:mx-10  py-8">
         <h1 className="text-blue-900 text-center mb-10 text-2xl lg:text-3xl">
           What makes our brand different
         </h1>
@@ -69,31 +70,23 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <Product/>
-      <div className="items-center text-center ml-18">
-      <button className="bg-white text-blue-950 p-2 w-52  hover:bg-blue-600">
-      View collection
-    </button></div>
-      <div className="flex gap-2 m-4">
-        <div><Content/></div>
-        <div><Yellowimg/></div>
-      </div>
-      <div className="text-center text-white   py-8 px-4 bg-orange-700">
+      
+      <div className="text-center text-blue-950  py-8 px-4 ">
           <h2 className="text-2xl lg:text-4xl mb-6">Join the club and get the benefits</h2>
           <p className="text-sm mb-6">
             Sign up for our newsletter and receive exclusive offers on <br /> new ranges, sales, pop-up stores, and more
           </p>
           <ul className="flex flex-wrap justify-center gap-5">
             <li className="flex gap-2">
-              <CiCircleCheck color="white" />
+              <CiCircleCheck color="blue" />
               Exclusive offers
             </li>
             <li className="flex gap-2">
-              <CiCircleCheck color="white" />
+              <CiCircleCheck color="blue" />
               Free events
             </li>
             <li className="flex gap-2">
-              <CiCircleCheck color="white" />
+              <CiCircleCheck color="blue" />
               Large discounts
             </li>
           </ul>
@@ -104,11 +97,12 @@ export default function Home() {
                   className="p-2 w-3/4 focus:outline-none"
                   style={{ background: "rgba(77,78,147,0.39)" }}
                 />
+                
                 <button className="py-2 px-6 bg-blue-950 text-white text-xs hover:bg-blue-700">
                   Sign Up
                 </button>
               </div>
     </div>
-    </div>
-  );
+        </div>
+    )
 }
