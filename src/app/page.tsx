@@ -18,7 +18,7 @@ export default function Home() {
           </p>
           <Link href='/productlisting2'>
           <button className="ml-14 py-2 px-6 bg-gray-50 text-[rgb(91,96,118)] text-xs mt-6 lg:mt-36 hover:bg-blue-700">
-            View Collection
+            View Collectionn
           </button></Link>
         </div>
       </div>
